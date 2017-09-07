@@ -1,0 +1,1 @@
+[] spawn RHM_night;

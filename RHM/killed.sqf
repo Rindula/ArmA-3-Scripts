@@ -1,0 +1,12 @@
+_killer = _this select 0;
+defender = "C_Marshal_F" createUnit [position _killer, grpNull];
+uiSleep(0.1);
+defender addBackpack "B_Carryall_oucamo";
+[defender, "LMG_Mk200_MRCO_F", 20] call BIS_fnc_addWeapon;
+defender allowDamage false;
+defender setSkill 1;
+defender fireAtTarget _killer;
+systemChat format["Eine AI einheit ist auf dem Weg um sich an %1 zu rächen.",name _killer];
+waitUntil (!alive (_killer));
+systemChat format["%1 wurde erfolgreich eliminiert.",name _killer];
+deleteVehicle defender;

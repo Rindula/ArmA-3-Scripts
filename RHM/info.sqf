@@ -1,0 +1,1 @@
+systemChat format ["%1",numberToDate [date select 0,daytime]];
