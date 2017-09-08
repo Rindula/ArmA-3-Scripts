@@ -78,7 +78,7 @@ rhm_doorOpen = false;
 
 player addAction ["FASTCLOSE",{preprocessFile "rhm\fastclose.sqf";},[],100000000,false,true,"","fclose"];
 
-version = "1.3.5";
+version = "1.3.6";
 
 anewsb =
 {
@@ -282,8 +282,6 @@ RHM_typeText = {
 #define DELAY_CHARACTER	0.01;
 #define DELAY_CURSOR	0.05;
 
-private["_data","_posX","_posY","_rootFormat","_toDisplay"];
-private["_blocks","_block","_blockCount","_blockNr","_blockArray","_blockText","_blockTextF","_blockTextF_","_blockFormat","_formats","_inputData","_processedTextF","_char","_cursorInvis","_blinkCounts","_blinkCount"];
 
 _data 				= [_this, 0, [], [[]]] call BIS_fnc_param;
 _speed              = [_this, 1, 0.05, [123]] call BIS_fnc_param;
@@ -378,7 +376,6 @@ keybinds =
 	{
 		case 38:
 		{
-			private ["_speed","_vehicle"];
 			_vehicle = cursorTarget;
 			_speed   = round (speed _vehicle);
 
@@ -399,7 +396,6 @@ keybinds =
 		};
 		case 39:
 		{
-			private["_vehicle","_data"];
 			_vehicle = cursorTarget;
 			if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship")) then {
 				_owners = _vehicle getVariable "vehicle_info_owners";
