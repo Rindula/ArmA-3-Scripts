@@ -1,0 +1,1 @@
+player allowDamage false; detach cursorTarget;cursorTarget setVariable["Escorting",false,true];cursorTarget setVariable["restrained",FALSE,TRUE];}; uiSleep 2; player allowDamage true;

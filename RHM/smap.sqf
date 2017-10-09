@@ -1,0 +1,1 @@
+[nil,position player,[[[3600,13100,0]],player setPos [3600,13100,0],"Kavala","Kavala nahe des Marktplatzes","Rindula"]] call BIS_fnc_StrategicMapOpen;

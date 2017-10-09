@@ -1,0 +1,18 @@
+			keypr = nil;
+			keybindsr = nil;
+if (!isnil "keypr") then
+{
+	(findDisplay 46) displayRemoveEventHandler ["KeyDown", keypr];
+};
+keybindsr =
+{
+	switch (_this) do 
+	{
+		case 67:
+		{
+			
+		};
+	};
+};
+waituntil {!isnull (finddisplay 46)};
+keypr = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this select 1 call keybindsr; false;"];

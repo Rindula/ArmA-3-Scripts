@@ -1,0 +1,1 @@
+#include "[RHM] Fast Close Funktion - Injektion muss erneuert werden!"

@@ -1,0 +1,1 @@
+[["CONTINUE"],"BIS_fnc_endMission"]  call BIS_fnc_MP;
