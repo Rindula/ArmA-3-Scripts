@@ -1,0 +1,9 @@
+language: python
+python: 3.6
+jobs:
+  include:
+    - stage: "LINT"
+      before_script:
+        - pip3 install sqflint
+      script:
+        - python -m unittest discover
